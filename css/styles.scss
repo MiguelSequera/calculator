@@ -1,0 +1,54 @@
+@use './globals' as g;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: g.$font;
+  font-size: 62.5%;
+}
+
+main{
+  height: 100vh;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: g.$black;
+  .screen{
+    width: 300px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    &__title {
+      color: g.$orange;
+      font-size: 4rem;
+    }
+    &__div {
+      height: 5rem;
+      border-radius: 30px;
+      background-color: g.$white;
+    &-p{
+      font-size: 2.5rem;
+      color: g.$black;
+      line-height: 4rem;
+      }
+    }
+  }
+  .calculator{
+    width: 500px;
+    height: 400px;
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 5px;
+      &__boton{
+        font-size: 1.8rem;
+        border-radius: 50px;
+      }
+  }
+}
